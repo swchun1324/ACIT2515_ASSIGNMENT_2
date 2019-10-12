@@ -17,6 +17,7 @@ class Drink(AbstractMenuItem):
         """ returns menu item type """
         MENU_ITEM_TYPE = "drink" 
         return MENU_ITEM_TYPE
+        
     def get_manufacturer(self):
         pass
     def get_size(self):
