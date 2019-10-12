@@ -15,7 +15,10 @@ class Food(AbstractMenuItem):
     def menu_item_description(self):
         pass
     def get_type(self):
-        pass
+        """ returns menu item type """
+        MENU_ITEM_TYPE = "food" 
+        return MENU_ITEM_TYPE
+        
     def get_portion_size(self):
         pass
     def get_main_ingredient(self):
