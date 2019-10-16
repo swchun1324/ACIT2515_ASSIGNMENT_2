@@ -3,6 +3,10 @@ from menu_item_stats import MenuItemStats
 from food import Food
 from drink import Drink
 
+
+
+
+
 class MenuItemManager:
     """ creates menu item manager """    
     def __init__(self, restaurant_name):
@@ -76,19 +80,19 @@ class MenuItemManager:
                 num_drinks += 1
 
         for menu_item in self._menu:
+            if menu_item.get_type() == "drink":
+                item_price = menu_item.get_price()
+                drink_price_list.append(item_price)
+                avg_price_drink = sum(drink_price_list)/len(drink_price_list)
+                
 
+
+
+        for menu_item in self._menu:
             if menu_item.get_type() == "food":
                 item_price = menu_item.get_price()
                 food_price_list.append(item_price)
                 avg_price_food = sum(food_price_list)/len(food_price_list)
-
-        
-
-            elif menu_item.get_type == "drink":
-                item_price = menu_item.get_price()
-                drink_price_list.append(item_price)
-                avg_price_food = sum(drink_price_list)/len(drink_price_list) 
-
 
         stats = MenuItemStats(total_num_menu_items,num_foods, num_drinks, avg_price_food, avg_price_drink)
 
